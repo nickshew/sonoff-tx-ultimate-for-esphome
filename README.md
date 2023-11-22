@@ -48,7 +48,7 @@ substitutions:
   relay_count: "2"
 
 packages:
-  smarthomeyourself.tx-ultimate: github://SmartHome-yourself/sonoff-tx-ultimate-for-esphome/tx_ultimate.yaml@main
+  smarthomeyourself.tx-ultimate: github://nickshew/sonoff-tx-ultimate-for-esphome/tx_ultimate.yaml@main
   
 esphome:
   name: ${name}

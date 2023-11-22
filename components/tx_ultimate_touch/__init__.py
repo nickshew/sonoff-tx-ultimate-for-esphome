@@ -7,7 +7,7 @@ from esphome.const import (
 
 from esphome import automation
 
-CODEOWNERS = ["@SmartHome-yourself"]
+CODEOWNERS = ["@nickshew"]
 DEPENDENCIES = ['uart']
 
 # CONFIG-IDs

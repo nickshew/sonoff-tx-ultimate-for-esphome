@@ -113,7 +113,7 @@ logger:
     uart_debug: INFO
 
 dashboard_import:
-  package_import_url: github://SmartHome-yourself/sonoff-tx-ultimate-for-esphome/tx_ultimate.yaml@main
+  package_import_url: github://nickshew/sonoff-tx-ultimate-for-esphome/tx_ultimate.yaml@main
   import_full_config: false
 
 api:
