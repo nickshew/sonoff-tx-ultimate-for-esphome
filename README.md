@@ -1,6 +1,6 @@
 #### Choose language:
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/SmartHome-yourself/sonoff-tx-ultimate-for-esphome/blob/master/README.md) 
-[![de](https://img.shields.io/badge/lang-de-blue.svg)](https://github.com/SmartHome-yourself/sonoff-tx-ultimate-for-esphome/blob/master/README.de.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/nickshew/sonoff-tx-ultimate-for-esphome/blob/master/README.md) 
+
 
 
 # SONOFF TX Ultimate for ESPHome (Custom Component)
@@ -16,8 +16,7 @@ Alternatively, you can also react to swipe and multi-touch via the binary sensor
   
 &nbsp;  
   
-## Detailed video on the TX Ultimate - Custom Component
-[![SONOFF TX Ultimate - Custom Component](http://img.youtube.com/vi/naDLhX89enQ/0.jpg)](https://www.youtube.com/watch?v=naDLhX89enQ "SONOFF TX Ultimate - Custom Component")
+## This has been modified from the original to be compatible with the US 120 version in portrait mode
   
 &nbsp;  
   
@@ -564,7 +563,7 @@ You can use all components based on their ID.
 **uart:** my_uart  
   
 ### LED Lights
-**28 RGBIC LEDs:** leds  
+**32 RGBIC LEDs:** leds  
   
 ### Audio
 **media_player:** media_out  

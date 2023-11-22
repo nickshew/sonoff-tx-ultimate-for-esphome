@@ -87,14 +87,14 @@ namespace esphome
                 this->touch_trigger_.trigger(tp);
                 break;
 
-            case TOUCH_STATE_SWIPE_LEFT:
-                ESP_LOGD(TAG, "Swipe Left (x=%d)", tp.x);
-                this->swipe_trigger_left_.trigger(tp);
+            case TOUCH_STATE_SWIPE_UP:
+                ESP_LOGD(TAG, "Swipe Up (x=%d)", tp.x);
+                this->swipe_trigger_up_.trigger(tp);
                 break;
 
-            case TOUCH_STATE_SWIPE_RIGHT:
-                ESP_LOGD(TAG, "Swipe Right (x=%d)", tp.x);
-                this->swipe_trigger_right_.trigger(tp);
+            case TOUCH_STATE_SWIPE_DOWN:
+                ESP_LOGD(TAG, "Swipe Down (x=%d)", tp.x);
+                this->swipe_trigger_down_.trigger(tp);
                 break;
 
             case TOUCH_STATE_ALL_FIELDS:
@@ -119,8 +119,8 @@ namespace esphome
             int state = get_touch_state(bytes);
             if (state != TOUCH_STATE_PRESS &&
                 state != TOUCH_STATE_RELEASE &&
-                state != TOUCH_STATE_SWIPE_LEFT &&
-                state != TOUCH_STATE_SWIPE_RIGHT &&
+                state != TOUCH_STATE_SWIPE_UP &&
+                state != TOUCH_STATE_SWIPE_DOWN &&
                 state != TOUCH_STATE_ALL_FIELDS)
             {
                 return false;
@@ -147,11 +147,11 @@ namespace esphome
                 return bytes[5];
                 break;
 
-            case TOUCH_STATE_SWIPE_LEFT:
+            case TOUCH_STATE_SWIPE_UP:
                 return bytes[5];
                 break;
 
-            case TOUCH_STATE_SWIPE_RIGHT:
+            case TOUCH_STATE_SWIPE_DOWN:
                 return bytes[5];
                 break;
 
@@ -177,13 +177,13 @@ namespace esphome
 
             if (state == TOUCH_STATE_SWIPE)
             {
-                if (bytes[5] == TOUCH_STATE_SWIPE_RIGHT)
+                if (bytes[5] == TOUCH_STATE_SWIPE_DOWN)
                 {
-                    state = TOUCH_STATE_SWIPE_RIGHT;
+                    state = TOUCH_STATE_SWIPE_DOWN;
                 }
-                else if (bytes[5] == TOUCH_STATE_SWIPE_LEFT)
+                else if (bytes[5] == TOUCH_STATE_SWIPE_UP)
                 {
-                    state = TOUCH_STATE_SWIPE_LEFT;
+                    state = TOUCH_STATE_SWIPE_UP;
                 }
             }
 

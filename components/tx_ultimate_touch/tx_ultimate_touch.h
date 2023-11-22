@@ -18,8 +18,8 @@ namespace esphome
 
         const static uint8_t TOUCH_STATE_ALL_FIELDS = 11;
 
-        const static uint8_t TOUCH_STATE_SWIPE_RIGHT = 12;
-        const static uint8_t TOUCH_STATE_SWIPE_LEFT = 13;
+        const static uint8_t TOUCH_STATE_SWIPE_DOWN = 12;
+        const static uint8_t TOUCH_STATE_SWIPE_UP = 13;
 
         struct TouchPoint
         {
@@ -32,8 +32,8 @@ namespace esphome
         public:
             Trigger<TouchPoint> *get_touch_trigger() { return &this->touch_trigger_; }
             Trigger<TouchPoint> *get_release_trigger() { return &this->release_trigger_; }
-            Trigger<TouchPoint> *get_swipe_left_trigger() { return &this->swipe_trigger_left_; }
-            Trigger<TouchPoint> *get_swipe_right_trigger() { return &this->swipe_trigger_right_; }
+            Trigger<TouchPoint> *get_swipe_up_trigger() { return &this->swipe_trigger_up_; }
+            Trigger<TouchPoint> *get_swipe_down_trigger() { return &this->swipe_trigger_down_; }
             Trigger<TouchPoint> *get_full_touch_release_trigger() { return &this->full_touch_release_trigger_; }
             Trigger<TouchPoint> *get_long_touch_release_trigger() { return &this->long_touch_release_trigger_; }
 
@@ -57,8 +57,8 @@ namespace esphome
 
             Trigger<TouchPoint> touch_trigger_;
             Trigger<TouchPoint> release_trigger_;
-            Trigger<TouchPoint> swipe_trigger_left_;
-            Trigger<TouchPoint> swipe_trigger_right_;
+            Trigger<TouchPoint> swipe_trigger_up_;
+            Trigger<TouchPoint> swipe_trigger_down_;
             Trigger<TouchPoint> full_touch_release_trigger_;
             Trigger<TouchPoint> long_touch_release_trigger_;
 
